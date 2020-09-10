@@ -1,5 +1,6 @@
 body {
 	font-family: Arial, Helvetica, sans-serif, sans-serif;
+	background-color: #f9f9f9;
 }
 
 /************ All header elements ***********/
@@ -137,6 +138,7 @@ h6{
 
 .description img {
 	float: right;
+	height: 30px;
 }
 
 .description {
@@ -148,14 +150,13 @@ h6{
 
 /* Sub Discription */
 .sub-description p {
-	margin-top: 2em;
+	margin-top: 2.5em;
 	float: left;
 	line-height: 2em;
+	position: relative;
+	right: 7em;
 }
 
-.sub-description p:first-of-type {
-	margin-right: 6em;
-}
 
 .name {
 	float: left;
@@ -163,6 +164,13 @@ h6{
 
 .subscriptions {
 	float: right;
+    background-color: #cc0000;
+    border: none;
+    color: white;
+    font-size: initial;
+    padding: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .more {
@@ -171,4 +179,207 @@ h6{
     margin-left: 4em;
     color:  #606060;
     font-weight: 600;
+}
+
+/*********************Side Section *********************/
+aside {
+	grid-area: aside;
+}
+.aside-top {
+	margin: 0.4em 0 2em 0;
+}
+
+.aside-top a {
+	float: right;
+	text-decoration: none;
+	color: gray;
+	font-size: 0.75em;
+	font-weight: bold;
+}
+
+.aside-top p {
+	float: left;
+	font-size: 0.97em;
+}
+
+.top-recomandation{
+   border-bottom: 1px solid lightgray;
+}
+
+.recomandation li {
+    list-style: none;
+	display: grid;
+	grid-template-areas: 'img h3 h3' 'img p p';
+	padding: 3px
+}
+.recomandation li h3{
+    font-weight: bold;
+    display: contents;
+    padding: 2em;
+	margin: 2em;
+	grid-area: 'h3';
+}
+.recomandation li p{
+	display: contents;
+	color: #606060;
+	font-size: small;
+	grid-area: 'p';
+}
+
+/*************************** Comment Section************************** */
+section {
+	grid-area: section;
+	display: grid;
+	grid-gap: 1em;
+	grid-template-rows: auto 1fr;
+}
+
+
+
+/* type comment  */
+.comments {
+	width: 26.4%;
+	position: relative;
+	/* top: 1em; */
+	font-size: 1.1em;
+	color: #606060;
+}
+
+.sort-container {
+	position: relative;
+	left: 12em;
+	bottom: 0.9em;
+	width: 20%;
+}
+
+.sort-container p {
+	position: relative;
+	left: 2.5em;
+	bottom: 1em;
+	color: gray;
+	font-size: 0.9em;
+	font-weight: bold;
+	color: #606060;
+}
+
+.profile .fas {
+	width: 8%;
+	font-size: 2.7rem;
+	color: #4374e0;
+}
+
+.fa-user-circle{
+	color: #4374e0;
+	font-size: 2.7rem;
+}
+
+.profile img {
+	width: 3.3em;
+}
+
+.input__container {
+	position: relative;
+	left: 5em;
+	bottom: 2.5em;
+	margin-right: 5em;
+}
+
+.input__container input {
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid lightgray;
+	background-color: #f9f9f9;
+	color: gray;
+	font-size: 1.2em;
+}
+
+/* Per Comment */
+.comment p,
+.comment a {
+	margin-left: 4.5em;
+	position: relative;
+}
+
+.comments__name {
+	position: relative;
+	bottom: 3em;
+	font-size: 0.86em;
+	font-weight: 700;
+}
+
+.comments__name a {
+	text-decoration: none;
+	color: gray;
+	position: relative;
+	right: 4em;
+	font-weight: 700;
+}
+
+.comments__comment {
+	position: relative;
+	bottom: 2em;
+	line-height: 1.3em;
+}
+
+
+.likes {
+	display: grid;
+	grid-template-columns: repeat(4, 3em);
+	width: 20em;
+	font-size: 0.86em;
+	position: relative;
+	bottom: 2em;
+	left: 3.1em;
+	margin-left: 2em;
+}
+.likes .fas{
+	position: relative;
+	font-size: 1rem;
+}
+
+.comments__text {
+	position: relative;
+	top: 0.5em;
+	margin: 0;
+	text-decoration: none;
+	color: gray;
+}
+
+.comments__replies {
+	text-decoration: none;
+	color: #4885ed;
+	position: relative;
+	bottom: 0.9em;
+}
+
+
+/* media quries*/
+@media only screen and (max-width: 1002px) {
+	main {
+		margin: 0 1.8em 0 1.8em;
+		display: grid;
+		grid-gap: 1.5em;
+		grid-template-columns: 1fr;
+		grid-template-rows: 0.2fr 1fr 0.55fr;
+		grid-template-areas: "video" "aside" "section";
+	}
+	.video-container iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	aside {
+		width: 50%;
+	}
+	.aside__top-container {
+		width: 200%;
+	}
+}
+
+@media only screen and (max-width: 560px) {
+	body {
+		min-width: 475px;
+	}
 }
