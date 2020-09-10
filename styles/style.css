@@ -298,6 +298,7 @@ section {
 .comment a {
 	margin-left: 4.5em;
 	position: relative;
+	margin-top:.7em;
 }
 
 .comments__name {
@@ -340,7 +341,7 @@ section {
 .comments__text {
 	position: relative;
 	top: 0.5em;
-	margin: 0;
+	margin-left: 0;
 	text-decoration: none;
 	color: gray;
 }
